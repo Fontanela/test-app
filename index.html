@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2"
+    ></script>
     <title>Teste</title>
   </head>
   <body>
@@ -24,4 +28,39 @@
       </section>
     </main>
   </body>
+  <script>
+    function handle(delta) {
+      var time = 1000;
+      var distance = 100;
+
+      $("html, body")
+        .stop()
+        .animate(
+          {
+            scrollLeft: $(window).scrollLeft() - distance * delta,
+          },
+          time
+        );
+    }
+
+    function wheel(event) {
+      var delta = 0;
+      if (event.wheelDelta) {
+        delta = event.wheelDelta / 120;
+      } else if (event.detail) {
+        delta = -event.detail / 4;
+      }
+
+      handle(delta);
+      if (event.preventDefault) {
+        event.preventDefault();
+      }
+      event.returnValue = false;
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener("DOMMouseScroll", wheel, false);
+    }
+    window.onmousewheel = document.onmousewheel = wheel;
+  </script>
 </html>

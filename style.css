@@ -2,6 +2,10 @@ main {
   height: 115.24cm;
   width: 600cm;
 }
+html {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
 .panels {
   display: flex;
   justify-content: space-evenly;
