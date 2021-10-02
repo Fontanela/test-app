@@ -1,0 +1,40 @@
+main {
+  height: 115.24cm;
+  width: 600cm;
+}
+.panels {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+.ruler {
+  position: relative;
+}
+.meter {
+  height: 115.24cm;
+  width: 100cm;
+  text-align: center;
+  align-content: center;
+  color: lightgrey;
+  font-size: 10cm;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.c1 {
+  background-color: #bffff1;
+}
+.c2 {
+  background-color: #7cffcb;
+}
+.c3 {
+  background-color: #74f2ce;
+}
+.c4 {
+  background-color: #78bc61;
+}
+.c5 {
+  background-color: #379634;
+}
+.c6 {
+  background-color: #0a3200;
+}
