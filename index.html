@@ -31,7 +31,11 @@
 
     scrollContainer.addEventListener("wheel", (evt) => {
       evt.preventDefault();
-      scrollContainer.scrollLeft += evt.deltaY;
+      if (evt.deltaY > 0) {
+        scrollContainer.scrollLeft += 21;
+      } else if (evt.deltaY < 0) {
+        scrollContainer.scrollLeft -= 21;
+      }
     });
   </script>
 </html>
